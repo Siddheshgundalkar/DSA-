@@ -1,0 +1,9 @@
+class Solution {
+  public:
+    int kthLargest(vector<int> &arr, int k) {
+        int n = arr.size();
+        nth_element(arr.begin(), arr.begin()+ n-k, arr.end());
+
+        return arr[n-k];
+    }
+};
